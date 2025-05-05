@@ -10,6 +10,7 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
+    "smoke": "wdio run ./wdio.conf.ts --cucumberOpts.tagExpression=@smoke",
     "positive_tests": "wdio run ./wdio.conf.ts --cucumberOpts.tagExpression=@positive",
     "negative_tests": "wdio run ./wdio.conf.ts --cucumberOpts.tagExpression=@negative"
 

@@ -1,6 +1,6 @@
 Feature: Trello Board Management Tool
 
-  @positive @settings
+  @positive @settings @smoke
   Scenario: Successful workspace name update
     Given I navigate to workspace settings
     When Update the workspace name with a valid value
@@ -24,7 +24,7 @@ Feature: Trello Board Management Tool
     When I try to create a new card in any list leaving the card name empty
     Then The system will not allow me to create the new card
 
-  @positive @card
+  @positive @card @smoke
   Scenario: Filter cards by label
     Given I navigate to any of my boards
     When I apply the filter 'Bug'
@@ -60,7 +60,7 @@ Feature: Trello Board Management Tool
     When I create a new board with empty name
     Then The system should not allow me to create a new board
 
-  @positive @board
+  @positive @board @smoke
   Scenario: Search for an existing board
     Given I navigate to my boards
     When I search for an existing board using the search tool
